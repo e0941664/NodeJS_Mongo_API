@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
 MONGO_URI =
-  'mongodb+srv://username:password123!@cluster0.terwq.mongodb.net/userdetails?retryWrites=true&w=majority';
+  'mongodb+srv://user:pass123!@nodemongoapi.pqu6a.mongodb.net/userdetails?retryWrites=true&w=majority';
 
+  console.log(MONGO_URI);
 const DBconn = async () => {
   const conn = await mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: false,
   });
 
   console.log(`Connection to MongoDB successful...DB: ${conn.connection.host}`);
