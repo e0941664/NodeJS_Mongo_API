@@ -14,7 +14,7 @@ exports.getUsers = async (req, res) => {
 // @route     GET /api/v1/users/:id
 // @access    Public
 exports.getUser = async (req, res) => {
-  const userdetail = await Userdetails.findOne({ _id: req.params.id });
+  const userdetail = await Userdetails.findById({ _id: req.params.id });
 
   if (!userdetail) {
     return res.status(401).json({
@@ -23,9 +23,7 @@ exports.getUser = async (req, res) => {
     });
   }
 
-  res
-    .status(200)
-    .json({ success: true, count: userdetail.length, data: userdetail });
+  res.status(200).json({ success: true, data: userdetail });
 };
 
 // @desc      Create new user
@@ -44,7 +42,7 @@ exports.createnewUser = async (req, res) => {
 // @route     PUT /api/v1/users/:id
 // @access    Public
 exports.updateUser = async (req, res) => {
-  let userdetail = await Userdetails.findById(req.params.id);
+  let userdetail = await Userdetails.findById({ _id: req.params.id });
 
   if (!userdetail) {
     return res.status(401).json({
@@ -52,7 +50,8 @@ exports.updateUser = async (req, res) => {
       error: `No user found for the following id: ${req.body.id}`,
     });
   }
-  userdetail = await Userdetails.findOneAndUpdate(req.params.id, req.body, {
+  
+  userdetail = await Userdetails.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
   });
