@@ -47,7 +47,7 @@ exports.updateUser = async (req, res) => {
   if (!userdetail) {
     return res.status(401).json({
       success: false,
-      error: `No user found for the following id: ${req.body.id}`,
+      error: `No user found for the following id: ${req.params.id}`,
     });
   }
   
@@ -68,7 +68,7 @@ exports.deleteUser = async (req, res) => {
   if (!userdetail) {
     return res.status(401).json({
       success: false,
-      error: `No user found for the following id: ${req.body.id}`,
+      error: `No user found for the following id: ${req.params.id}`,
     });
   }
 
