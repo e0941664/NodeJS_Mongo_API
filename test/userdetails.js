@@ -1,6 +1,10 @@
 let mongoose = require('mongoose');
-let userdetails = require('../models/Userdetails');
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({ path: './config/config.env' });
+process.env.NODE_ENV = 'testing';
 
+let userdetails = require('../models/Userdetails');
 let chai = require('chai');
 let chaihttp = require('chai-http');
 let server = require('../index');

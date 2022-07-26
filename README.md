@@ -73,8 +73,7 @@ The default path that we will be using is 'http://localhost:5000/api/v1/users' a
                2) Headers : None
                3) Body : None
     
-    RESPONSE: We will get the following responses. If success then we will get SUCCESS response and if we had any   
-              error, we will receive the ERROR response
+    RESPONSE: We will get the following responses. If success then we will get SUCCESS response and if we had any error, we will receive the ERROR response
 
         SUCCESS:
                 {
@@ -85,6 +84,7 @@ The default path that we will be using is 'http://localhost:5000/api/v1/users' a
         ERROR : We will get the following response
                 {
                     success: false
+                    statusCode: 4XX
                     error: error message
                 }
 
@@ -107,6 +107,7 @@ The default path that we will be using is 'http://localhost:5000/api/v1/users' a
         ERROR : We will get the following response
                 {
                     success: false
+                    statusCode: 4XX
                     error: error message
                 }
 
@@ -136,6 +137,7 @@ The default path that we will be using is 'http://localhost:5000/api/v1/users' a
         ERROR : We will get the following response
                 {
                     success: false
+                    statusCode: 4XX
                     error: error message
                 }
 
@@ -165,6 +167,7 @@ The default path that we will be using is 'http://localhost:5000/api/v1/users' a
         ERROR : We will get the following response
                 {
                     success: false
+                    statusCode: 4XX
                     error: error message
                 }
 
@@ -186,6 +189,7 @@ The default path that we will be using is 'http://localhost:5000/api/v1/users' a
         ERROR : We will get the following response
                 {
                     success: false
+                    statusCode: 4XX
                     error: error message
                 }
 
