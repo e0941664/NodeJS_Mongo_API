@@ -5,7 +5,7 @@ This is a starter project to gain hands-on on how NODEJS can be used to perform 
 - Database  : MongoDB
 - Testing Framework : Mocha
 - Development tool  : Visual Studio code
-- API Running tool  : Postman
+- API Platform tool  : Postman
 
 # REQUIRED INSTALLATIONS
     
@@ -17,6 +17,9 @@ This is a starter project to gain hands-on on how NODEJS can be used to perform 
         
         3) MongoDB: A free account can be created in the cloud based Mongo Atlas which I have made use of in this       
                     project. To create the account and  database, follow the steps provided in the below link 'https://www.mongodb.com/docs/atlas/getting-started/' (change to ATLAS UI for clear understanding if you are not familiar using CLI) and update your respective DB connection end point in the following path '../config/db'. Change MONGO_URI with you respective URI.
+        
+        4) Postman: For this project, I used Postman to build and test the API. To download, use the following URL: 
+                    'https://www.postman.com/downloads/'
 
 # SETTING UP THE CODE
   1) Download the project.
@@ -55,7 +58,7 @@ As mentioned, this is a starter project to perform CRUD operations with REST API
 
 Once you run 'npm run dev', our project will start running on 'http://localhost:5000/'. To check the CRUD operations on user data, open postman and  send a new request.
 
-The default path that will be using is 'http://localhost:5000/api/v1/users' and depending on the request method, the respective CRUD operations will occur. Note that the our project should be ruuning for this to work.
+The default path that we will be using is 'http://localhost:5000/api/v1/users' and depending on the request method, the respective CRUD operations will occur. Note that the our project should be ruuning for this to work.
 
 #### GET All users
     In Postman, select the GET method, 
