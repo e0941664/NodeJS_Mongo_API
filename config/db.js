@@ -1,3 +1,5 @@
+//@desc     Connection string to connect with mongoDB
+
 const mongoose = require('mongoose');
 
 const DBconn = async () => {

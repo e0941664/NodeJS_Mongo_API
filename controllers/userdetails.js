@@ -1,3 +1,5 @@
+//@desc     controller to handle user detail related request and pass it to service. 
+
 const userdetailsService = require('../services/userdetailsService');
 
 // @desc      Get all users
