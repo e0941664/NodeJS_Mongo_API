@@ -40,6 +40,12 @@ Scripts:
 
 3) To stop our application, use 'CTRL + C'. 
 
+# API DOCUMENTATION
+
+The API documentation is published in the following URL: 'https://documenter.getpostman.com/view/20201670/UzXLzxq1'
+
+Download the documentation of the collection from the URL and start you test. 
+
 # GETTING STARTED
 ## APPLICATION FEATURES
 
