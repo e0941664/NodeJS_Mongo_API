@@ -82,12 +82,12 @@ describe('Userdetails', () => {
         .get('/api/v1/users/' + userdetail._id)
         .send(userdetail)
         .end((err, res) => {
-          res.should.have.status(401);
+          res.should.have.status(400);
           res.body.should.be.a('object');
           res.body.should.have.property('success').eql(false);
           res.body.should.have
             .property('error')
-            .eql('No user found for the endtered id: ' + userdetail._id);
+            .eql('No user found for the entered id: ' + userdetail._id);
           done();
         });
     });
@@ -135,7 +135,7 @@ describe('Userdetails', () => {
         .post('/api/v1/users')
         .send(userdetail)
         .end((err, res) => {
-          res.should.have.status(401);
+          res.should.have.status(400);
           res.body.should.be.a('object');
           res.body.should.have.property('success').eql(false);
           res.body.should.have.property('error');
@@ -187,7 +187,7 @@ describe('Userdetails', () => {
         .put('/api/v1/users/' + updateduserdetail._id)
         .send(updateduserdetail)
         .end((err, res) => {
-          res.should.have.status(401);
+          res.should.have.status(400);
           res.body.should.be.a('object');
           res.body.should.have.property('success').eql(false);
           res.body.should.have.property('error');
@@ -223,7 +223,7 @@ describe('Userdetails', () => {
         .request(server)
         .delete('/api/v1/users/' + userId)
         .end((err, res) => {
-          res.should.have.status(401);
+          res.should.have.status(400);
           res.body.should.be.a('object');
           res.body.should.have.property('success').eql(false);
           res.body.should.have.property('error');
