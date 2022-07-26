@@ -2,7 +2,6 @@ const Userdetails = require('../models/Userdetails');
 
 // @desc      Get all users
 // @route     GET /api/v1/users
-// @access    Public
 exports.getUsers = async (req, res) => {
   const userdetails = await Userdetails.find();
   res
@@ -12,7 +11,6 @@ exports.getUsers = async (req, res) => {
 
 // @desc      Get single user by id
 // @route     GET /api/v1/users/:id
-// @access    Public
 exports.getUser = async (req, res) => {
   const userdetail = await Userdetails.findById({ _id: req.params.id });
 
@@ -28,7 +26,6 @@ exports.getUser = async (req, res) => {
 
 // @desc      Create new user
 // @route     POST /api/v1/users
-// @access    Public
 exports.createnewUser = async (req, res) => {
   try {
     const userdetail = await Userdetails.create(req.body);
@@ -40,7 +37,6 @@ exports.createnewUser = async (req, res) => {
 
 // @desc      Update user by id
 // @route     PUT /api/v1/users/:id
-// @access    Public
 exports.updateUser = async (req, res) => {
   let userdetail = await Userdetails.findById({ _id: req.params.id });
 
@@ -61,7 +57,6 @@ exports.updateUser = async (req, res) => {
 
 // @desc      Delete user by id
 // @route     DELETE /api/v1/users/:id
-// @access    Public
 exports.deleteUser = async (req, res) => {
   const userdetail = await Userdetails.findById(req.params.id);
 
