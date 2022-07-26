@@ -35,6 +35,7 @@ exports.getUser = async (req, res) => {
 // @route     POST /api/v1/users
 exports.createnewUser = async (req, res) => {
   try {
+    //Create new user
     const userdetail = await Userdetails.create(req.body);
     res.status(201).json({ success: true, data: userdetail });
   } catch (err) {
@@ -65,6 +66,7 @@ exports.updateUser = async (req, res) => {
       );
   }
 
+  //Find the user by id
   let userdetail = await Userdetails.findById({ _id: req.params.id });
 
   if (!userdetail) {
@@ -79,6 +81,7 @@ exports.updateUser = async (req, res) => {
       );
   }
 
+  //Update the userdetails with the details from the req.body
   userdetail = await Userdetails.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -104,6 +107,7 @@ exports.deleteUser = async (req, res) => {
       );
   }
 
+  //remove the user from DB
   userdetail.remove();
 
   res.status(200).json({ success: true, data: {} });

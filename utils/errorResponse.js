@@ -1,3 +1,4 @@
+//@desc     wrapper class to construct error messages
 class ErrorResponse extends Error {
   constructor(statusCode, success, error) {
     super(error);
